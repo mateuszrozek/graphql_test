@@ -1,0 +1,16 @@
+type Article {
+    id: ID!
+    title: String!
+    text:String!
+}
+
+type Query{
+    article(id: ID!): Article
+    findAllAtricles: [Article]!
+}
+
+type Mutation {
+    newArticle(title: String!, text: String!): Article!
+    updateArticle(id: ID!, title: String!, text: String!): Article
+    deleteArticle(id: ID): Boolean!
+}
